@@ -1,0 +1,11 @@
+{
+    "users": [
+      {
+        "name": "Tina User",
+        "email": "user@tina.io",
+        "username": "tina",
+        "password": "tina"
+      }
+    ]
+  }
+  

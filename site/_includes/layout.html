@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{ title | default: "My Blog" }}</title>
+	</head>
+	<body>
+		<header>
+			<h1>{{ title | default: "My Blog" }}</h1>
+		</header>
+		<nav>
+			| <a href="/" title="Home Page">Home</a> | <a href="/about" title="About us">About us</a> | <a href="/posts" title="Posts">Posts</a> |
+		</nav>
+		<main>
+			{{ content }}
+		</main>
+	</body>
+</html>
