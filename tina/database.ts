@@ -26,7 +26,7 @@ export default isLocal
       }),
       databaseAdapter: new MongodbLevel<string, Record<string, unknown>>({
         collectionName: branch,
-        dbName: "tinacms-test-oct-31",
+        dbName: "tinacms-self-host",
         mongoUri: process.env.MONGODB_URI!,
       }),
     });
