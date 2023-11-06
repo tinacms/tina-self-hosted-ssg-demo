@@ -8,5 +8,5 @@
   force = true
 
 [dev]
-  command = "npm run dev"
+  command = "yarn run dev"
   publish = "_site"
