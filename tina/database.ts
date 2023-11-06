@@ -7,8 +7,6 @@ dotenv.config();
 
 const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
 
-console.log("isLocal", isLocal);
-
 const branch =
   process.env.GITHUB_BRANCH ||
   process.env.VERCEL_GIT_COMMIT_REF ||

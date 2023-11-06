@@ -1,12 +1,8 @@
 import express from "express";
-import type { RequestHandler } from "express";
 import cookieParser from "cookie-parser";
 import ServerlessHttp from "serverless-http";
-import {
-  TinaNodeBackend,
-  LocalBackendAuthentication,
-} from "@tinacms/datalayer";
-import { AuthJsBackendAuthentication, TinaAuthJSOptions } from "tinacms-authjs";
+import { TinaNodeBackend, LocalBackendAuthProvider } from "@tinacms/datalayer";
+import { AuthJsBackendAuthProvider, TinaAuthJSOptions } from "tinacms-authjs";
 import cors from "cors";
 import dotenv from "dotenv";
 
@@ -24,9 +20,9 @@ app.use(cookieParser());
 const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
 
 const tinaBackend = TinaNodeBackend({
-  authentication: isLocal
-    ? LocalBackendAuthentication()
-    : AuthJsBackendAuthentication({
+  authProvider: isLocal
+    ? LocalBackendAuthProvider()
+    : AuthJsBackendAuthProvider({
         authOptions: TinaAuthJSOptions({
           databaseClient,
           secret: process.env.NEXTAUTH_SECRET!,
@@ -36,25 +32,14 @@ const tinaBackend = TinaNodeBackend({
   databaseClient,
 });
 
-const handleTina: RequestHandler = async (req, res) => {
-  const routes = req.params[0].split("/");
-  console.log("routes", routes);
-  req.query = {
-    ...(req.query || {}),
-    routes,
-  };
-
-  await tinaBackend(req, res);
-};
-
-app.post("/api/tina/*", async (req, res, next) => {
+app.post("/api/tina/*", async (req, res) => {
   // Modify request if needed
-  handleTina(req, res, next);
+  tinaBackend(req, res);
 });
 
-app.get("/api/tina/*", async (req, res, next) => {
+app.get("/api/tina/*", async (req, res) => {
   // Modify request if needed
-  handleTina(req, res, next);
+  tinaBackend(req, res);
 });
 
 export const handler = ServerlessHttp(app);
