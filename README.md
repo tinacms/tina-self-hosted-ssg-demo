@@ -2,6 +2,8 @@
 
 This is a demo of how one can self-host TinaCMS with a static site that does not utilize Next.js. This demo is set up to use [Vercel Functions](https://tina.io/docs/self-hosted/tina-backend/vercel-functions/) and [Netlify Functions](https://tina.io/docs/self-hosted/tina-backend/netlify-functions/) to host the [Tina backend](https://tina.io/docs/self-hosted/overview/).
 
+This site is setup to use 11ty for the static site generator, but you can use any static site generator you want.
+
 ## Overview
 
 This demo uses the [MongoDB database adapter](https://tina.io/docs/reference/self-hosted/database-adapter/mongodb/), [AuthJS authentication](https://tina.io/docs/reference/self-hosted/authentication-provider/next-auth/), and the [GitHub git provider](https://tina.io/docs/reference/self-hosted/git-provider/github/). These can be replaced with other adapters/providers as needed.
