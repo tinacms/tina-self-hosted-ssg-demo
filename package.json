@@ -3,10 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "TINA_PUBLIC_IS_LOCAL=false tinacms dev -c 'eleventy --input='site' --serve --port $PORT' ",
+    "dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c 'eleventy --input='site' --serve --port $PORT' ",
     "dev:prod": "TINA_PUBLIC_IS_LOCAL=false tinacms dev -c 'eleventy --input='site' --serve'",
-    "express-dev": "TINA_PUBLIC_IS_LOCAL=true tsx express-backend/index.ts",
-    "express:prod": "TINA_PUBLIC_IS_LOCAL=false tsx express-backend/index.ts",
     "build": "tinacms build --verbose && eleventy --input='site'",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
@@ -20,6 +18,7 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "mongodb-level": "^0.0.2",
+    "next": "^14.0.1",
     "next-auth": "^4.24.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

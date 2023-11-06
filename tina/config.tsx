@@ -9,7 +9,7 @@ const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
 console.log("isLocalConfigFile", isLocal);
 
 const config = defineConfig({
-  contentApiUrlOverride: "http://localhost:3000/api/tina/gql", // ensure this value is provided depending on your hosting solution
+  contentApiUrlOverride: "/api/tina/gql", // ensure this value is provided depending on your hosting solution
   authProvider: isLocal
     ? new LocalAuthProvider()
     : new UsernamePasswordAuthJSProvider(),
