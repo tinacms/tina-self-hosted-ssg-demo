@@ -9,8 +9,6 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
-    "@clerk/backend": "^0.32.1",
-    "@clerk/clerk-js": "^4.55.0",
     "@tinacms/cli": "0.0.0-20231106195136",
     "@tinacms/datalayer": "0.0.0-20231106195136",
     "cookie-parser": "^1.4.6",
@@ -26,9 +24,7 @@
     "tinacms": "0.0.0-20231106195136",
     "tinacms-authjs": "0.0.0-20231106195136",
     "tinacms-gitprovider-github": "0.0.0-20231106195136",
-    "ts-node": "^10.9.1",
-    "tsx": "^3.12.7",
-    "wrangler": "^3.4.0"
+    "tsx": "^3.12.7"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
