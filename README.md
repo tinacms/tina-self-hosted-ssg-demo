@@ -10,6 +10,18 @@ This demo uses the [MongoDB database adapter](https://tina.io/docs/reference/sel
 
 ## Setup Instructions
 
+### Use the template
+
+Click the "Use this template" button to create a new repo from this template.
+
+### Clone the repo and install dependencies
+
+```bash
+git clone git@github.com:<Your Username Here>/tina-self-hosted-ssg-demo.git
+cd tina-self-hosted-static-site-demo
+yarn install
+```
+
 ### Setting Up MongoDB
 
 You can use a local or remote MongoDB database. You'll need to provide the connection string in the `.env` file.
@@ -30,12 +42,6 @@ cp .env.sample .env
 `GITHUB_PERSONAL_ACCESS_TOKEN`: A [github personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token) with repo access to both read and write
 `MONGO_URI`: The connection string for your MongoDB database
 `NEXTAUTH_SECRET`: A random string used to encrypt the session
-
-## Instal dependencies
-
-```
-yarn install
-```
 
 #### Setup with Vercel functions
 
@@ -71,9 +77,31 @@ To run the app locally:
 netlify dev
 ```
 
-## Testing auth
+## Testing auth locally
 
-Set `TINA_PUBLIC_IS_LOCAL` to "false" to test your auth integration locally
+If you want to test production authentication and use the production backend locally, you can do so by setting the `TINA_PUBLIC_IS_LOCAL` environment variable to "false".
+
+Update the `.env file` to include the following:
+
+```
+TINA_PUBLIC_IS_LOCAL=false
+```
+
+and update your dev script (in your netlify.toml or vercel.json file)
+
+```
+yarn dev:prod
+```
+
+This will run the app locally using the production backend.
+
+> **NOTE:** This will index your **local content** into the production backend and will overview any content that is there. To avoid this you can use a different branch.
+
+`.env`
+
+```.env
+GITHUB_BRANCH=local
+```
 
 ## Troubleshooting
 
