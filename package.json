@@ -2,6 +2,9 @@
   "name": "tina-standalone",
   "private": true,
   "version": "0.0.0",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c 'eleventy --input='site' --serve --port $PORT' ",
     "dev:prod": "TINA_PUBLIC_IS_LOCAL=false tinacms dev -c 'eleventy --input='site' --serve'",
@@ -9,36 +12,36 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
-    "@tinacms/cli": "^1.5.34",
-    "@tinacms/datalayer": "^1.2.29",
-    "cookie-parser": "^1.4.6",
+    "@tinacms/cli": "^1.12.6",
+    "@tinacms/datalayer": "^1.4.3",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.1",
     "mongodb-level": "^0.0.2",
     "next": "14.2.35",
-    "next-auth": "^4.24.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "next-auth": "^4.24.13",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "serverless-http": "^3.2.0",
-    "tinacms": "^1.5.24",
-    "tinacms-authjs": "^1.0.0",
-    "tinacms-gitprovider-github": "^1.0.0",
-    "tsx": "^3.12.7"
+    "tinacms": "^1.6.7",
+    "tinacms-authjs": "^1.0.7",
+    "tinacms-gitprovider-github": "^1.0.11",
+    "tsx": "^3.14.0"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@types/cookie-parser": "^1.4.5",
-    "@types/cors": "^2.8.15",
-    "@types/express": "^4.17.20",
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "@vercel/node": "^3.0.7",
-    "eslint": "^8.45.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.3",
-    "typescript": "^5.0.2"
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.25",
+    "@types/react": "^18.3.27",
+    "@types/react-dom": "^18.3.7",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@vercel/node": "^3.2.29",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.26",
+    "typescript": "^5.9.3"
   }
 }
