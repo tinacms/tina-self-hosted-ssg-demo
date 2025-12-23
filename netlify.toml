@@ -1,6 +1,9 @@
 [functions]
   node_bundler = "esbuild"
 
+[build.environment]
+  NODE_VERSION = "20"
+
 [[redirects]]
   from = "/api/tina/*"
   to = "/.netlify/functions/tina"
