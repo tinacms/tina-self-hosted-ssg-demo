@@ -9,7 +9,7 @@
     "dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c 'eleventy --input='site' --serve --port $PORT' ",
     "dev:prod": "TINA_PUBLIC_IS_LOCAL=false tinacms dev -c 'eleventy --input='site' --serve'",
     "build": "tinacms build --verbose && eleventy --input='site'",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
     "@tinacms/cli": "^1.12.6",
@@ -38,12 +38,11 @@
     "@types/express": "^4.17.25",
     "@types/react": "^18.3.27",
     "@types/react-dom": "^18.3.7",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
     "@vercel/node": "^3.2.29",
-    "eslint": "^8.57.1",
-    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint": "^9.39.2",
+    "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.26",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.50.1"
   }
 }
