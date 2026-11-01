@@ -12,8 +12,8 @@
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
-    "@tinacms/cli": "^1.12.6",
-    "@tinacms/datalayer": "^1.4.3",
+    "@tinacms/cli": "^4.0.4",
+    "@tinacms/datalayer": "^3.0.0",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^16.6.1",
@@ -26,9 +26,9 @@
     "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "^18.3.1",
     "serverless-http": "^3.2.0",
-    "tinacms": "^1.6.7",
-    "tinacms-authjs": "^1.0.7",
-    "tinacms-gitprovider-github": "^1.0.11",
+    "tinacms": "^3.14.0",
+    "tinacms-authjs": "^24.0.5",
+    "tinacms-gitprovider-github": "^5.0.0",
     "tsx": "^3.14.0"
   },
   "devDependencies": {
